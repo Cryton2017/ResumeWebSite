@@ -38,7 +38,9 @@
                 </li>
               </ul>
               <button class="btn btn-primary my-2 my-sm-0" type="submit">Login</button>
-              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Create Account</button>
+              <form>
+                <button class="btn btn-secondary my-2 my-sm-0" type="button" id="CreateAccount">Create Account</button>
+              </form>
             </div>
           </div>
       </nav>
@@ -190,10 +192,32 @@
         </div>
         <br>
 
+        <!--Dialog Box-->
+        <div class="modal" id="Dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="Title">Notice</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p id="confirmation"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="closeBtn">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       </div>
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+      <script src="createAccount.js"></script>
     </body>
 </html>

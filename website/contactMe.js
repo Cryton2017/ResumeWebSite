@@ -23,11 +23,11 @@ window.addEventListener("load", function () {
         //Show the Dialog box to the user:
         $(document).ready(function(){
           $("#confirmation").html("The request was submitted successfully!");
-          $('#contactDiaglog').modal("show");
+          $('#Dialog').modal("show");
 
           //Hide the box when the user clicks close:
           $('#closeBtn').click(function(){
-            $('#contactDiaglog').modal("hide");
+            $('#Dialog').modal("hide");
           });
         }); 
       }else{
@@ -35,11 +35,11 @@ window.addEventListener("load", function () {
         //Show the Dialog box to the user:
         $(document).ready(function(){
           $("#confirmation").html("The request was not submitted!");
-          $('#contactDiaglog').modal("show");
+          $('#Dialog').modal("show");
 
           //Hide the box when the user clicks close:
           $('#closeBtn').click(function(){
-            $('#contactDiaglog').modal("hide");
+            $('#Dialog').modal("hide");
           });
         }); 
       }
@@ -70,5 +70,19 @@ window.addEventListener("load", function () {
 
   });
 });
+
+
+$(document).ready(function(){
+  $(documnet).onclick(function(){
+    $("#confirmation").html("The request was submitted successfully!");
+    $('#Dialog').modal("show");
+  
+    //Hide the box when the user clicks close:
+    $('#closeBtn').click(function(){
+      $('#Dialog').modal("hide");
+    });
+  }); 
+});
+
 
 
