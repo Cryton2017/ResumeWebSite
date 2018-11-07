@@ -1,0 +1,262 @@
+#navbar{
+    background-color: #2780E3;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+html, body {
+    height: 100%;
+  }
+
+body{
+    background-image: url('Images/background.jpg');
+    background-attachment: fixed ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    top: 3.4rem;
+}
+
+.infoTable{
+    text-align: left;
+    vertical-align: top;
+}
+
+.info{
+    border: 1px solid #2780E3;
+    border-radius: 30px;
+    color: #2780E3;
+    background-color: white;
+    text-align: left;
+    width: 50%;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.webPresence{
+    width: 100%;
+    text-align: center;
+    max-width: 90%;
+}
+
+.currentProjects{
+    position: absolute;
+    top: 23%;
+    left: 60%;
+    text-align: left;
+}
+
+/*------------------------------------------------------------*/
+
+@media(max-width:767px){
+
+    #intro{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #introAboutMe{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #introJobHistory{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #infoReferences{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #introCurrent{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #infoContactMe{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    .currentProjects{
+        position: relative;
+        top: 15%;
+        left: 5%;
+        text-align: left;
+    }
+
+}
+
+/*------------------------------------------------------------*/
+
+@media(max-width:768px){
+
+    #intro{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #introAboutMe{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #introJobHistory{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #infoReferences{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #introCurrent{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #infoContactMe{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+}
+
+/*------------------------------------------------------------*/
+
+@media(max-width:992px){
+
+    #intro{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #introAboutMe{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #introJobHistory{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #infoReferences{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #introCurrent{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+
+    #infoContactMe{
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+    
+}
+
+/*------------------------------------------------------------*/
+
+@media(min-width:1200px){
+
+    #intro{
+        position: relative;
+        top: 35%;
+        left: 25%;
+        width: 50%;
+    }
+
+    #introAboutMe{
+        position: relative;
+        top: 35%;
+        left: 25%;
+        width: 50%;
+    }
+
+    #introJobHistory{
+        position: relative;
+        top: 35%;
+        left: 25%;
+        width: 50%;
+    }
+
+    #infoReferences{
+        position: relative;
+        top: 35%;
+        left: 25%;
+        width: 50%;
+    }
+
+    #introCurrent{
+        position: relative;
+        top: 35%;
+        left: 25%;
+        width: 50%;
+    }
+
+    #introPast{
+        position: relative;
+        top: 10%;
+        left: 25%;
+        width: 50%;
+    }
+
+    #infoContactMe{
+        position: relative;
+        top: 35%;
+        left: 25%;
+        width: 50%;
+    }
+}
