@@ -30,24 +30,50 @@ window.addEventListener("load", function () {
             $('#Dialog').modal("hide");
           });
         }); 
-      }else{
+      }else if(response.ADDED == "NO"){
+        if(response.STATUS == "VALIDATIONFAIL"){
 
-        //Show the Dialog box to the user:
-        $(document).ready(function(){
-          $("#confirmation").html("The request was not submitted!");
-          $('#Dialog').modal("show");
+          //Show the Dialog box to the user:
+          $(document).ready(function(){
+            $("#confirmation").html("The provided information was not in the right format! Please try again with valid data.");
+            $('#Dialog').modal("show");
 
-          //Hide the box when the user clicks close:
-          $('#closeBtn').click(function(){
-            $('#Dialog').modal("hide");
-          });
-        }); 
+            //Hide the box when the user clicks close:
+            $('#closeBtn').click(function(){
+              $('#Dialog').modal("hide");
+            });
+          }); 
+
+        }else if(response.STATUS == "QUERYFAIL"){
+
+          //Show the Dialog box to the user:
+          $(document).ready(function(){
+            $("#confirmation").html("Hmmm, Somehting went wrong. Please try again later.");
+            $('#Dialog').modal("show");
+
+            //Hide the box when the user clicks close:
+            $('#closeBtn').click(function(){
+              $('#Dialog').modal("hide");
+            });
+          }); 
+        }
       }
     });
 
     //Define what happens in case of error:
     XHR.addEventListener("error", function(event) {
-      alert('Oops! Something went wrong.');
+
+      //Show the Dialog box to the user:
+      $(document).ready(function(){
+        $("#confirmation").html("Network Request Failed. Please try again");
+        $('#Dialog').modal("show");
+
+        //Hide the box when the user clicks close:
+        $('#closeBtn').click(function(){
+          $('#Dialog').modal("hide");
+        });
+      }); 
+
     });
 
     //Setup the request:
@@ -72,17 +98,17 @@ window.addEventListener("load", function () {
 });
 
 
-$(document).ready(function(){
-  $(documnet).onclick(function(){
-    $("#confirmation").html("The request was submitted successfully!");
-    $('#Dialog').modal("show");
+// $(document).ready(function(){
+//   $(documnet).onclick(function(){
+//     $("#confirmation").html("The request was submitted successfully!");
+//     $('#Dialog').modal("show");
   
-    //Hide the box when the user clicks close:
-    $('#closeBtn').click(function(){
-      $('#Dialog').modal("hide");
-    });
-  }); 
-});
+//     //Hide the box when the user clicks close:
+//     $('#closeBtn').click(function(){
+//       $('#Dialog').modal("hide");
+//     });
+//   }); 
+// });
 
 
 

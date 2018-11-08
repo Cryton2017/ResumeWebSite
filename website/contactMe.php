@@ -4,26 +4,86 @@
     // error_reporting(E_ALL);
 
     //Extract Parameters:
-    $rawEmail = $_POST['contactEmail1'];
-    $rawName = $_POST['contactName'];
-    $rawCatagory = $_POST['contactCatagory'];
-    $rawQuery = $_POST['contactQuery'];
+    $usrEmail = "";
+    $usrName = "";
+    $usrCatagory = "";
+    $usrQuery = "";
+    $validated = true;
 
-    //Validate parameters:
-    $validEmail = validateEmail($rawEmail);
-    $validName = validateName($rawName);
-    $validCatagory = validateCatagory($rawCatagory);
-    $validQuery = validateQuery($rawQuery);
+    //Check if an email was provided:
+    if(!isset($_POST['contactEmail1'])){
+        $validated = false;
+    }else{
+
+        //Validate the provided email:
+        if(validateEmail($_POST['contactEmail1'])){
+            $usrEmail = $_POST['contactEmail1'];
+        }else{
+            $validated = false;
+        }
+            
+        
+    }
+
+    //Check if a name was provided:
+    if(!isset($_POST['contactName'])){
+        $validated = false;
+    }else{
+
+        //Validate the provided name:
+        if(validateName($_POST['contactName'])){
+            $usrName = $_POST['contactName'];
+        }else{
+            $validated = false;
+        }
+    }
+
+    //Check if a catagory was provided:
+    if(!isset($_POST['contactCatagory'])){
+        $validated = false;
+    }else{
+
+        //Validate the provided catagory:
+        if(validateCatagory($_POST['contactCatagory'])){
+            $usrCatagory = $_POST['contactCatagory'];
+        }else{
+            $validated = false;
+        }
+    }
+
+    //Check if a query was provided:
+    if(!isset($_POST['contactQuery'])){
+        $validated = false;
+    }else{
+
+        //Validate the provided query:
+        if(validateQuery($_POST['contactQuery'])){
+            $usrQuery = $_POST['contactQuery'];
+        }else{
+            $validated = false;
+        }
+    }
+
+    //Get the date:
     $DateTime = getDateTime();
 
-    //Send data to database:
-    $response = sendRequest($validName, $validEmail, $validCatagory, $validQuery, $DateTime);
-    echo json_encode($response);
+    if($validated){
+
+        //Send data to database:
+        $response = sendRequest($usrName, $usrEmail, $usrCatagory, $usrQuery, $DateTime);
+        echo json_encode($response);
+
+    }else{
+
+        //Send an error:
+        echo json_encode(array('ADDED' => 'NO', 'STATUS' => 'VALIDATIONFAIL'));
+
+    }
 
     //Validate the email:
     function validateEmail($Email){
         if(filter_var($Email, FILTER_VALIDATE_EMAIL)) {
-            return $Email;
+            return true;
         }
         return false;
     }
@@ -32,7 +92,7 @@
     function validateName($Name){
         $pattern = '/^[\p{L}\p{P}\p{Zs}]+$/';
         if (preg_match($pattern, $Name)) {
-            return $Name;
+            return true;
         }else{
             return false;
         }
@@ -43,7 +103,7 @@
         if($Catagory == "--Select Catagory--"){
             return false;
         }else{
-            return $Catagory;
+            return true;
         }
     }
 
@@ -51,7 +111,7 @@
     function validateQuery($Query){
         $pattern = '/^[a-zA-Z0-9,.!?:() ]*$/';
         if (preg_match($pattern, $Query)) {
-            return $Query;
+            return true;
         }else{
             return false;
         }
@@ -71,9 +131,7 @@
                 VALUES (?,?,?,?,?)';
 
         //Set up the PDO:
-        
         $pdo = new PDO($connect_pdo, $User, $Password);
-        //$pdo = new PDO('mysql:host=10.0.0.131;dbname=resumeSite', 'admin', 'SIQ6UHEHy');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         try {
@@ -84,9 +142,9 @@
             
             //If there is atleast one result:
             if ($sth->execute($array) === TRUE) {
-                return array('ADDED' => 'YES');
+                return array('ADDED' => 'YES', 'STATUS' => 'OK');
             }else{
-                return array('ADDED' => 'NO');
+                return array('ADDED' => 'NO', 'STATUS' => 'QUERYFAIL');
             }
 
         } catch (PDOException $e) {
