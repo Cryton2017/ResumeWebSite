@@ -3,6 +3,74 @@
 //Add an onload event listener:
 window.addEventListener("load", function () {
 
+  //Validate the user's email address:
+  function validateEmail(email){
+
+    var pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return pattern.test(email);
+
+  }
+
+  //Validate the user's name:
+  function validateName(name){
+
+    var pattern = /^[a-zA-Z ]*$/;
+    return pattern.test(name);
+    
+  }
+
+  //Validate the selected catagory:
+  function validateCatagory(catagory){
+
+    if(catagory != "--Select Category--"){
+      return true;
+    }else{
+      return false;
+    }
+    
+  }
+
+  //Validate the user's query:
+  function validateQuery(query){
+
+    var pattern = /^[a-zA-Z0-9,.!?:() ]*$/;
+    return pattern.test(query);
+    
+  }
+
+  //Check that all data is valid:
+  function checkValidation(){
+    
+    //Get the user's inputs:
+    var usrEmail = document.getElementById('contactEmail1').value;
+    var usrName = document.getElementById('contactName').value;
+    var selectedCatagory = document.getElementById('contactCatagory').value;
+    var usrQuery = document.getElementById('contactQuery').value;
+
+    //Check that everything is valid:
+    if(validateEmail(usrEmail) && validateName(usrName) &&
+       validateCatagory(selectedCatagory) && validateQuery(usrQuery)){
+
+      //Send the data:
+      sendData();
+
+    }else{
+
+      //Show the Dialog box to the user:
+      $(document).ready(function(){
+        $("#confirmation").html("The provided information was not in the right format! Please try again with valid data.");
+        $('#Dialog').modal("show");
+
+        //Hide the box when the user clicks close:
+        $('#closeBtn').click(function(){
+          $('#Dialog').modal("hide");
+        });
+      });
+
+    }
+
+  }
+
   //Function to send the data:
   function sendData() {
 
@@ -91,8 +159,8 @@ window.addEventListener("load", function () {
     
     //Prevent defualt action:
     event.preventDefault();
-    //Send the data:
-    sendData();
+    //Validate the data:
+    checkValidation();
 
   });
 });
