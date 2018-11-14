@@ -42,14 +42,20 @@ window.addEventListener("load", function () {
   function checkValidation(){
     
     //Get the user's inputs:
-    var usrEmail = document.getElementById('contactEmail1').value;
-    var usrName = document.getElementById('contactName').value;
-    var selectedCatagory = document.getElementById('contactCatagory').value;
-    var usrQuery = document.getElementById('contactQuery').value;
+    var usrEmail = document.getElementById('contactEmail1');
+    var usrName = document.getElementById('contactName');
+    var selectedCatagory = document.getElementById('contactCatagory');
+    var usrQuery = document.getElementById('contactQuery');
 
     //Check that everything is valid:
-    if(validateEmail(usrEmail) && validateName(usrName) &&
-       validateCatagory(selectedCatagory) && validateQuery(usrQuery)){
+    if(validateEmail(usrEmail.value) && validateName(usrName.value) &&
+       validateCatagory(selectedCatagory.value) && validateQuery(usrQuery.value)){
+
+      //Set the right border colours:
+      usrEmail.style.borderColor = "lightgrey";
+      usrName.style.borderColor = "lightgrey";
+      selectedCatagory.style.borderColor = "lightgrey";
+      usrQuery.style.borderColor = "lightgrey";
 
       //Send the data:
       sendData();
@@ -66,6 +72,30 @@ window.addEventListener("load", function () {
           $('#Dialog').modal("hide");
         });
       });
+
+      if(!validateEmail(usrEmail.value)){
+        usrEmail.style.borderColor = "red";
+      }else{
+        usrEmail.style.borderColor = "lightgrey";
+      }
+
+      if(!validateName(usrName.value)){
+        usrName.style.borderColor = "red";
+      }else{
+        usrName.style.borderColor = "lightgrey";
+      }
+
+      if(!validateCatagory(selectedCatagory.value)){
+        selectedCatagory.style.borderColor = "red";
+      }else{
+        selectedCatagory.style.borderColor = "lightgrey";
+      }
+
+      if(!validateQuery(usrQuery.value)){
+        usrQuery.style.borderColor = "red";
+      }else{
+        usrQuery.style.borderColor = "lightgrey";
+      }
 
     }
 
