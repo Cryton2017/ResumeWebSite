@@ -8,6 +8,7 @@
     $usrName = "";
     $usrCatagory = "";
     $usrQuery = "";
+    $validationFial = array();
     $validated = true;
 
     //Check if an email was provided:
