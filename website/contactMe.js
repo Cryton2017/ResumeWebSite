@@ -64,7 +64,7 @@ window.addEventListener("load", function () {
 
       //Show the Dialog box to the user:
       $(document).ready(function(){
-        $("#confirmation").html("The provided information was not in the right format! Please try again with valid data.");
+        $("#confirmation").html("The provided information was not in the right format! Please fix the fields marked in red.");
         $('#Dialog').modal("show");
 
         //Hide the box when the user clicks close:
@@ -104,6 +104,12 @@ window.addEventListener("load", function () {
   //Function to send the data:
   function sendData() {
 
+    //Get the user's inputs:
+    var usrEmail = document.getElementById('contactEmail1');
+    var usrName = document.getElementById('contactName');
+    var selectedCatagory = document.getElementById('contactCatagory');
+    var usrQuery = document.getElementById('contactQuery');
+
     //Create the new request:
     var XHR = new XMLHttpRequest();
     // Bind the FormData object and the form element
@@ -128,12 +134,20 @@ window.addEventListener("load", function () {
             $('#Dialog').modal("hide");
           });
         }); 
+
+        //Set the right border colours:
+        usrEmail.style.borderColor = "lightgrey";
+        usrName.style.borderColor = "lightgrey";
+        selectedCatagory.style.borderColor = "lightgrey";
+        usrQuery.style.borderColor = "lightgrey";
+
       }else if(response.ADDED == "NO"){
+
         if(response.STATUS == "VALIDATIONFAIL"){
 
           //Show the Dialog box to the user:
           $(document).ready(function(){
-            $("#confirmation").html("The provided information was not in the right format! Please try again with valid data.");
+            $("#confirmation").html("The provided information was not in the right format! Please fix the fields marked in red.");
             $('#Dialog').modal("show");
 
             //Hide the box when the user clicks close:
@@ -141,6 +155,30 @@ window.addEventListener("load", function () {
               $('#Dialog').modal("hide");
             });
           }); 
+
+          if(response.Email == "NO"){
+            usrEmail.style.borderColor = "red";
+          }else{
+            usrEmail.style.borderColor = "lightgrey";
+          }
+
+          if(response.Name == "NO"){
+            usrName.style.borderColor = "red";
+          }else{
+            usrName.style.borderColor = "lightgrey";
+          }
+
+          if(response.Catagory == "NO"){
+            selectedCatagory.style.borderColor = "red";
+          }else{
+            selectedCatagory.style.borderColor = "lightgrey";
+          }
+
+          if(response.Query == "NO"){
+            usrQuery.style.borderColor = "red";
+          }else{
+            usrQuery.style.borderColor = "lightgrey";
+          }
 
         }else if(response.STATUS == "QUERYFAIL"){
 
