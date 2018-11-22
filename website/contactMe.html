@@ -38,84 +38,79 @@
                     <a class="nav-link" href="contactMe.html">Contact Me</a>
                 </li>
                 </ul>
-                <button class="btn btn-primary my-2 my-sm-0" type="button" id="Login" onclick="toggleDropDown();">Login</button>
-                <button class="btn btn-secondary my-2 my-sm-0" type="button" id="CreateAccount">Create Account</button>
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="MobileAccess">
+                        <input type="email" class="form-control mr-sm-2" id="usrEmail" aria-describedby="emailInput" placeholder="Enter Email">
+                    </div>
+                    <div class="MobileAccess">
+                        <input type="password" class="form-control mr-sm-2" id="usrPassword1" placeholder="Enter Password">
+                    </div>
+                    <button class="btn btn-primary my-2 my-sm-0" type="submit" id="Login">Login</button>
+                </form>
+                    <button class="btn btn-secondary my-2 my-sm-0" type="button" id="CreateAccount">Create Account</button>
             </div>
             </div>
         </nav>
 
         <div class="content">
+            <div class="info">
 
-            <div class="login" id="login" style="display: none;">
-                <form id="loginForm">
-                    <fieldset>
-                        <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        </div>
-                        <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>
-                        <button type="button" class="btn btn-primary" id="btnLogin">Login</button>
-                    </fieldset>
+                <div class="contactMeForm">
+                    <form id="contactForm">
+                        <fieldset>
+                            <legend class="responisveStyle">Contact Me</legend>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email Address</label>
+                                <input type="email" class="form-control" id="contactEmail1" name="contactEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                    <label class="col-form-label" for="inputDefault">Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter Name" id="contactName" name="contactName">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleSelect1">Category</label>
+                                <select class="form-control" id="contactCatagory" name="contactCatagory">
+                                <option id="defulat">--Select Category--</option>
+                                <option id="1">General Enquiry</option>
+                                <option id="2">View Private Project</option>
+                                <option id="3">Reference Contact</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleTextarea">Query</label>
+                                <textarea class="form-control" id="contactQuery" name="contactQuery" rows="5"></textarea>
+                            </div>
+                            <div class="responisveStyle">
+                                    <button type="submit" class="btn btn-primary" id="contact">Submit</button>
+                            </div>
+                            
+                        </fieldset>
                     </form>
-                    </div>
+                </div>
 
-            <div id="infoContactMe" class="info">
-                <!-- <form action="contactMe.php" method="POST" id="contactForm"> -->
-                <form id="contactForm">
-                    <fieldset>
-                        <legend>Contact Me</legend>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email Address</label>
-                            <input type="email" class="form-control" id="contactEmail1" name="contactEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                        <div class="form-group">
-                                <label class="col-form-label" for="inputDefault">Name</label>
-                                <input type="text" class="form-control" placeholder="Enter Name" id="contactName" name="contactName">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleSelect1">Category</label>
-                            <select class="form-control" id="contactCatagory" name="contactCatagory">
-                            <option id="defulat">--Select Category--</option>
-                            <option id="1">General Enquiry</option>
-                            <option id="2">View Private Project</option>
-                            <option id="3">Reference Contact</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleTextarea">Query</label>
-                            <textarea class="form-control" id="contactQuery" name="contactQuery" rows="5"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="contact">Submit</button>
-                    </fieldset>
-
-                    <!--Dialog Box-->
-                    <div class="modal" id="Dialog">
-                      <div class="modal-dialog" role="document">
+                <!--Dialog Box-->
+                <div class="modal" id="Dialog">
+                    <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                          <div class="modal-header">
+                            <div class="modal-header">
                             <h5 class="modal-title" id="Title">Notice</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true">&times;</span>
                             </button>
-                          </div>
-                          <div class="modal-body">
+                            </div>
+                            <div class="modal-body">
                             <p id="confirmation"></p>
-                          </div>
-                          <div class="modal-footer">
+                            </div>
+                            <div class="modal-footer">
                             <button type="button" class="btn btn-primary" id="closeBtn">Close</button>
-                          </div>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
-                </form>
+                </div>
             </div>
-
-            
+        </div>
+        <br>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -37,61 +37,50 @@
               <a class="nav-link" href="contactMe.html">Contact Me</a>
             </li>
           </ul>
-          <button class="btn btn-primary my-2 my-sm-0" type="button" id="Login" onclick="toggleDropDown();">Login</button>
+          <form class="form-inline my-2 my-lg-0">
+            <input type="email" class="form-control mr-sm-2" id="usrEmail" aria-describedby="emailInput" placeholder="Enter Email">
+            <input type="password" class="form-control mr-sm-2" id="usrPassword1" placeholder="Enter Password">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit" id="Login">Login</button>
+          </form>
           <button class="btn btn-secondary my-2 my-sm-0" type="button" id="CreateAccount">Create Account</button>
         </div>
       </nav>
+      
       <div class="content">
-
-        <div class="login" id="login" style="display: none;">
-          <form id="loginForm">
-              <fieldset>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <button type="button" class="btn btn-primary" id="btnLogin">Login</button>
-              </fieldset>
-            </form>
-          </div>
-
             <div id="infoReferences" class="info">
-                <h1>My References</h1>
+              <div class="responisveStyle"><h1>My References</h1></div>
                 <br>
 
-                <h2>Reference 1: </h2>
-                <ul>
-                    <li>Scott Sharpe (Professional):</li>
-                    <li>Operations Manager at Telstra</li>
-                    <li>See paper copy of resume for contact details.</li>
-                </ul>
+                <div class="referenceInfo">
+                  <div><h2>Reference 1: </h2></div>
+                  <div>Scott Sharpe (Professional):</div>
+                  <div>Operations Manager at Telstra</div>
+                  <div>See paper copy of resume for contact details.</div>
+                </div>
                 <br>
 
-                <h2>Reference 2: </h2>
-                <ul>
-                    <li>Michelle Baird (Professional): </li>
-                    <li>Mibase Toy Libraries CEO</li>
-                </ul>
+                <div class="referenceInfo">
+                  <div><h2>Reference 2:</h2></div>
+                  <div>Michelle Baird (Professional):</div>
+                  <div>Mibase Toy Libraries CEO</div>
+                </div>
                 <br>
 
-                <h2>Reference 3: </h2>
-                <ul>
-                    <li>Cameron Thompson (Personal):</li>
-                    <li>Friend and study partner at QUT</li>
-                    <li>See paper copy of resume for contact details.</li>
-                </ul>
+                <div class="referenceInfo">
+                  <div><h2>Reference 3: </h2></div>
+                  <div>Cameron Thompson (Personal):</div>
+                  <div>Friend and study partner at QUT</div>
+                  <div>See paper copy of resume for contact details.</div>
+                </div>
                 <br>
 
-                <h2>Reference 4: </h2>
-                <ul>
-                    <li>Vaughan Littlewood (Professional/Personal): </li>
-                    <li>Smithies Pizza and Volunteer Garden Work</li>
-                    <li>See paper copy of resume for contact details.</li>
-                </ul>
+                <div class="referenceInfo">
+                  <div><h2>Reference 4: </h2></div>
+                  <div>Vaughan Littlewood (Professional/Personal):</div>
+                  <div>Smithies Pizza and Volunteer Garden Work</div>
+                  <div>See paper copy of resume for contact details.</div>
+                </div>
+                <br>
             </div>
 
             <!--Dialog Box-->
@@ -115,6 +104,7 @@
             </div>
           </div>
       </div>
+      <br>
       
 
 

@@ -1,7 +1,7 @@
-#navbar{
+.navbar{
+    overflow: hidden;
     background-color: #2780E3;
     position: fixed;
-    left: 0;
     top: 0;
     width: 100%;
 }
@@ -20,29 +20,46 @@ body{
 }
 
 .content{
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
+    position: relative;
     top: 1rem;
+    margin-top: 1rem;
 }
 
 .infoTable{
-    text-align: left;
-    vertical-align: top;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 0 0 0;
+    padding: 0;
 }
 
-.login{
-    border: 1px solid #2780E3;
-    border-radius: 30px;
-    color: #2780E3;
-    background-color: white;
-    text-align: center;
-    padding-right: 1%;
-    padding-left: 1%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+.infoTable-cell{
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0.8em 1.2em;
+    overflow: hidden;
+    list-style: none;
+    border: solid 1px white;
+    background: fade(slategrey,20%);
 }
+
+.infoTable--2cols > .infoTable-cell  { width: 50%; }
+.infoTable--3cols > .infoTable-cell  { width: 33.33%; }
+.infoTable--4cols > .infoTable-cell  { width: 25%; }
+.infoTable--5cols > .infoTable-cell  { width: 20%; }
+.infoTable--6cols > .infoTable-cell  { width: 16.6%; }
 
 .info{
+    display: flex;
+    justify-content: c;
+    align-items: center;
+    flex-direction: column;
     border: 1px solid #2780E3;
     border-radius: 30px;
     color: #2780E3;
@@ -55,6 +72,40 @@ body{
     padding-bottom: 1%;
 }
 
+.infoRef{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 1px solid #2780E3;
+    border-radius: 30px;
+    color: #2780E3;
+    background-color: white;
+    text-align: left;
+    width: 50%;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#refHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.referenceInfo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+}
+
 #confirmation{
     color: #2780E3;
 }
@@ -63,78 +114,54 @@ body{
     color: #2780E3;
 }
 
-.webPresence{
+.PastAndCurrent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    text-align: center;
-    max-width: 90%;
 }
 
-.currentProjects{
-    position: absolute;
-    top: 23%;
-    left: 60%;
+.contactMeForm{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+}
+
+.responisveStyle{
     text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 /*------------------------------------------------------------*/
 
 @media(max-width:767px){
 
-    #login{
-        position: relative;
-        top: 0%;
-        left: 5%;
-        width: 90%;
-        margin-bottom: 1%;
-    }
-
-    #intro{
-        position: relative;
-        top: 5%;
-        left: 5%;
+    .info{
         width: 90%;
     }
 
-    #introAboutMe{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
+    .infoTable{
+        flex-direction: column;
+        width: 100%;
     }
 
-    #introJobHistory{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
+    .infoTable--2cols > .infoTable-cell  { width: 100%; }
+
+    .responisveStyle{
+        margin: 2%;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
     }
 
-    #infoReferences{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
-    }
-
-    #introCurrent{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
-    }
-
-    #infoContactMe{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
-    }
-
-    .currentProjects{
-        position: relative;
-        top: 15%;
-        left: 5%;
-        text-align: left;
+    .MobileAccess{
+        width: 100%;
+        margin-bottom: 2%;
     }
 
 }
@@ -143,54 +170,27 @@ body{
 
 @media(max-width:768px){
 
-    #login{
-        position: relative;
-        top: 0%;
-        left: 5%;
-        width: 90%;
-        margin-bottom: 1%;
+    .info{
+        width: 95%;
     }
 
-    #intro{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
+    .infoTable{
+        flex-direction: column;
+        width: 100%;
     }
 
-    #introAboutMe{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
+    .infoTable--2cols > .infoTable-cell  { width: 100%; }
+
+    .responisveStyle{
+        margin: 2%;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
     }
 
-    #introJobHistory{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
-    }
-
-    #infoReferences{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
-    }
-
-    #introCurrent{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
-    }
-
-    #infoContactMe{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
+    .MobileAccess{
+        width: 100%;
+        margin-bottom: 2%;
     }
 
 }
@@ -199,71 +199,36 @@ body{
 
 @media(max-width:992px){
 
-    #login{
-        position: relative;
-        top: 0%;
-        left: 5%;
-        width: 90%;
-        margin-bottom: 1%;
+    .info{
+        width: 95%;
     }
 
-    #intro{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
+    .infoTable{
+        flex-direction: column;
+        width: 100%;
     }
 
-    #introAboutMe{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
+    .infoTable--2cols > .infoTable-cell  { width: 100%; }
+
+    .responisveStyle{
+        margin: 2%;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
     }
 
-    #introJobHistory{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
+    .MobileAccess{
+        width: 100%;
+        margin-bottom: 2%;
     }
 
-    #infoReferences{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
-    }
-
-    #introCurrent{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
-    }
-
-    #infoContactMe{
-        position: relative;
-        top: 5%;
-        left: 5%;
-        width: 90%;
-    }
-    
 }
 
 /*------------------------------------------------------------*/
 
 @media(min-width:1200px){
 
-    #login{
-        position: relative;
-        top: 0%;
-        left: 69.5%;
-        width: 30%;
-        margin-bottom: 1%;
-    }
-
-    #intro{
+    /* #intro{
         position: relative;
         top: 35%;
         left: 25%;
@@ -310,5 +275,6 @@ body{
         top: 35%;
         left: 25%;
         width: 50%;
-    }
+    } */
+
 }

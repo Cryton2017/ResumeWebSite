@@ -37,68 +37,42 @@
               <a class="nav-link" href="contactMe.html">Contact Me</a>
             </li>
           </ul>
-          <button class="btn btn-primary my-2 my-sm-0" type="button" id="Login" onclick="toggleDropDown();">Login</button>
+          <form class="form-inline my-2 my-lg-0">
+            <input type="email" class="form-control mr-sm-2" id="usrEmail" aria-describedby="emailInput" placeholder="Enter Email">
+            <input type="password" class="form-control mr-sm-2" id="usrPassword1" placeholder="Enter Password">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit" id="Login">Login</button>
+          </form>
           <button class="btn btn-secondary my-2 my-sm-0" type="button" id="CreateAccount">Create Account</button>
         </div>
       </nav>
 
       <div class="content">
-
-        <div class="login" id="login" style="display: none;">
-          <form id="loginForm">
-              <fieldset>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <button type="button" class="btn btn-primary" id="btnLogin">Login</button>
-              </fieldset>
-            </form>
-          </div>
-
         <div id="introJobHistory" class="info">
           <h1>Enployment History</h1>
-          <table class="infoTable" cellspacing="10">
-            <tr class="infoTable">
-              <td>Telstra in Brisbane City: </td>
-              <td>
-                  As an intern for the winter break in 2017 (Month of July) in the position of Automation Specialist. This was awarded to me through the Stepping Into program run by the Australian Network on Disability (AND).
-              </td>
-            </tr>
-            <tr class="infoTable">
-              <td>Body Corporate at Food Works Scarness, Hervey Bay: </td>
-              <td>
-                  From April 2011 to December 2012.
-              </td>
-            </tr>
-            <tr class="infoTable">
-                <td>Smithies Pizzeria on the Esplanade in Scarness, Hervey Bay: </td>
-                <td>
-                    From August 2012 to March 2013.
-                </td>
-              </tr>
-          </table>
+          
+          <div class="infoTable infoTable--2cols" >
+            <div class="infoTable-cell"><h3>Telstra in Brisbane City: </h3></div>
+            <div class="infoTable-cell">As an intern for the winter break in 2017 (Month of July) in the position of Automation Specialist. This was awarded to me through the Stepping Into program run by the Australian Network on Disability (AND).</div>
+
+            <div class="infoTable-cell"><h3>Body Corporate at Food Works Scarness, Hervey Bay: </h3></div>
+            <div class="infoTable-cell">From April 2011 to December 2012.</div>
+
+            <div class="infoTable-cell"><h3>Smithies Pizzeria on the Esplanade in Scarness, Hervey Bay: </h3></div>
+            <div class="infoTable-cell">From August 2012 to March 2013.</div>
+          </div>
           <br>
 
           <h1>Volunteer History</h1>
-          <table class="infoTable" cellspacing="10">
-            <tr class="infoTable">
-              <td>Guide Dogs Queensland in Bald Hills, Brisbane: </td>
-              <td>
-                  From September 12th, 2016 to present. As a peer support member. My role is to provide emotional support, information and share my experiences with clients that get assigned to me by GDQ.
-              </td>
-            </tr>
-            <tr class="infoTable">
-                <td>Volunteer work as garden hand and landscaper: </td>
-                <td>
-                    Throughout my highschool career, I spent weekends and afternoons doing landscaping and gardening for family and friends.
-                </td>
-              </tr>
-          </table>
+          <div class="infoTable infoTable--2cols" >
+            <div class="infoTable-cell"><h3>Guide Dogs Queensland in Bald Hills, Brisbane: </h3></div>
+            <div class="infoTable-cell">From September 12th, 2016 to present. As a peer support member. My role is to provide emotional support, information and share my experiences with clients that get assigned to me by GDQ.</div>
+
+            <div class="infoTable-cell"><h3>Volunteer work as garden hand and landscaper: </h3></div>
+            <div class="infoTable-cell">Throughout my highschool career, I spent weekends and afternoons doing landscaping and gardening for family and friends.</div>
+
+          </div>
+          <br>
+
         </div>
         <br>
 

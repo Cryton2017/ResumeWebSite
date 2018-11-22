@@ -38,73 +38,78 @@
                     <a class="nav-link" href="contactMe.html">Contact Me</a>
                 </li>
                 </ul>
-                <button class="btn btn-primary my-2 my-sm-0" type="button" id="Login" onclick="toggleDropDown();">Login</button>
-                <button class="btn btn-secondary my-2 my-sm-0" type="button" id="CreateAccount">Create Account</button>
+                <form class="form-inline my-2 my-lg-0">
+                    <input type="email" class="form-control mr-sm-2" id="usrEmail" aria-describedby="emailInput" placeholder="Enter Email">
+                    <input type="password" class="form-control mr-sm-2" id="usrPassword1" placeholder="Enter Password">
+                    <button class="btn btn-primary my-2 my-sm-0" type="submit" id="Login">Login</button>
+                </form>
+                    <button class="btn btn-secondary my-2 my-sm-0" type="button" id="CreateAccount">Create Account</button>
             </div>
             </div>
         </nav>
 
         <div class="content">
+            <div class="info">
+                <div id="introCurrent" >
+                    <div class="PastAndCurrent"><h1>Current Projects</h1></div>
+                    <div class="PastAndCurrent">
+                        <p>
+                            Most of these in progress projects have many sub projects that consist of smaller features that make up the whole system. All projects that can be made available are available on github
+                            as a public repository. Projects such as the Mibase mobile application are not available as it is for a real world client. If you wish to view these works, I would be happy to arrange this with you.
+                        </p>
+                    </div>
+                    <br>
 
-            <div class="login" id="login" style="display: none;">
-                <form id="loginForm">
-                    <fieldset>
-                        <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        </div>
-                        <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>
-                        <button type="button" class="btn btn-primary" id="btnLogin">Login</button>
-                    </fieldset>
-                    </form>
+
+                    <div class="PastAndCurrent">
+                        <h2>GitHub Profile</h2>
+                        <div class="github-widget" data-username="cryton2017"></div>
+                        <script src="https://unpkg.com/github-card@1.2.1/dist/widget.js"></script>
+                    </div>
+                    <br>
+
+                    <div class="PastAndCurrent">
+                        <h2>Complete List of Current Projects</h2>
+                        <ul>
+                            <li>FiveM QLD Roleplay Server</li>
+                            <li>Custom FiveM Roleplay Framework</li>
+                            <li>Verex Exhaust Smart Controller</li>
+                            <li>Pathfinder With Friends Mobile Application</li>
+                            <li>Mibase Cross Platform Mobile Application</li>
+                            <li>Resume Website</li>
+                            <li>Lazy3D</li>
+                            <li>Various Unity Game projects (Tutorials)</li>
+                        </ul>
+                    </div> 
+                </div>
             </div>
+            <br>
+            
+            <div class="info">
+                <div id="introCurrent" >
+                    <div class="PastAndCurrent"><h1>Past Projects</h1></div>
 
-            <div id="introCurrent" class="info">
-                <h1>Current Projects</h1>
-                <div class="webPresence">
-                    <div class="github-widget" data-username="cryton2017"></div>
-                    <script src="https://unpkg.com/github-card@1.2.1/dist/widget.js"></script>
+                    <div class="PastAndCurrent">
+                        <p>
+                            These are a list of projects that I have completed throughout my highschool and university careers. Some projects may not be listed as they are private repositories. I am happy to arrange to show you 
+                            these projects if you would like. Please inform me if this is the case.
+                        </p>
+                    </div>
+                    <br>
+    
+                    <div class="PastAndCurrent">
+                        <ul>
+                            <li>Various University Assignments</li>
+                            <li>Babanuki Japanase Card Game</li>
+                            <li>Battle Ships (Backend and GUI)</li>
+                            <li>Basic Web Forum</li>
+                        </ul>
+                    </div>
                 </div>
-                <br>
-                <div class="webPresence currentProjects">
-                    <ul>
-                        <li>FiveM QLD Roleplay Server</li>
-                        <li>Mibase Cross Platform Mobile Application</li>
-                        <li>Resume Website</li>
-                        <li>Lazy3D</li>
-                        <li>Various Unity Game projects (Tutorials)</li>
-                    </ul>
-                </div>
-                <br>
-
-                <p>
-                    Most of these in progress projects have many sub projects that consist of smaller features that make up the whole system. All projects that can be made available are available on github
-                    as a public repository. Projects such as the Mibase mobile application are not available as it is for a real world client. If you wish to view these works, I would be happy to arrange this with you.
-                </p>
             </div>
             <br>
 
-            <div id="introCurrent" class="info">
-                <h1>Past Projects</h1>
-                <br>
-
-                <ul>
-                    <li>Various University Assignments</li>
-                    <li>Babanuki Japanase Card Game</li>
-                    <li>Battle Ships (Backend and GUI)</li>
-                    <li>Basic Web Forum</li>
-                </ul>
-                <br>
-
-                <p>
-                    These are a list of projects that I have completed throughout my highschool and university careers. Some projects may not be listed as they are private repositories. I am happy to arrange to show you 
-                    these projects if you would like. Please inform me if this is the case.
-                </p>
-            </div>
-            <br>
+            
 
             <!--Dialog Box-->
             <div class="modal" id="Dialog">
