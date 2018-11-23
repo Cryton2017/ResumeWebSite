@@ -1,16 +1,6 @@
 //Add an onload event listener:
 window.addEventListener("load", function () {
 
-  function toggleDropDown() {
-    var x = document.getElementById("login");
-    if (x.style.display === "none") {
-        x.style.display = "flex";
-    } else {
-        x.style.display = "none";
-    }
-  }
-
-
   $(document).ready(function(){
     $("#btnLogin").click(function(){
       $("#confirmation").html("This feature has not been implemented yet!");
@@ -22,6 +12,15 @@ window.addEventListener("load", function () {
       });
     }); 
   });
+
+  function checkValidation(){
+
+    //Get the user data:
+    var usrEmail = document.getElementById('usrEmail');
+    var usrPassword = document.getElementById('usrPassword');
+
+
+  }
 
   //Function to send the data:
   function sendData() {
@@ -84,16 +83,8 @@ window.addEventListener("load", function () {
     //Prevent defualt action:
     event.preventDefault();
     //Validate the data:
-    checkValidation();
+    //checkValidation();
+    
 
   });
 });
-
-function toggleDropDown() {
-  var x = document.getElementById("login");
-  if (x.style.display === "none") {
-      x.style.display = "block";
-  } else {
-      x.style.display = "none";
-  }
-}
