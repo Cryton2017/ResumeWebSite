@@ -13,13 +13,58 @@ window.addEventListener("load", function () {
     }); 
   });
 
+  //Validate the user's email address:
+  function validateEmail(email){
+    var pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return pattern.test(email);
+  }
+
+  //Validate the user's password:
+  function validatePassword(Password){
+    var pattern = /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/;
+    return pattern.test(Password);
+  }
+
+  //Check the validation before sending request:
   function checkValidation(){
 
     //Get the user data:
     var usrEmail = document.getElementById('usrEmail');
     var usrPassword = document.getElementById('usrPassword');
 
+    if(validateEmail(usrEmail.value) && validatePassword(usrPassword.value)){
 
+      //Set the right border colours:
+      usrEmail.style.borderColor = "lightgrey";
+      usrPassword.style.borderColor = "lightgrey";
+
+      //Send the data:
+      sendData();
+    }else{
+
+      //Show the Dialog box to the user:
+      $(document).ready(function(){
+        $("#confirmation").html("The provided information was not in the right format! Please fix the fields marked in red.");
+        $('#Dialog').modal("show");
+
+        //Hide the box when the user clicks close:
+        $('#closeBtn').click(function(){
+          $('#Dialog').modal("hide");
+        });
+      });
+
+      if(!validateEmail(usrEmail.value)){
+        usrEmail.style.borderColor = "red";
+      }else{
+        usrEmail.style.borderColor = "lightgrey";
+      }
+
+      if(!validatePassword(usrPassword.value)){
+        usrPassword.style.borderColor = "red";
+      }else{
+        usrPassword.style.borderColor = "lightgrey";
+      }
+    }
   }
 
   //Function to send the data:
@@ -83,7 +128,7 @@ window.addEventListener("load", function () {
     //Prevent defualt action:
     event.preventDefault();
     //Validate the data:
-    //checkValidation();
+    checkValidation();
     
 
   });
