@@ -1,0 +1,15 @@
+
+.component {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.component.sixth-component {
+    /* background-color: gray; */
+}
+
+h2 {
+    margin: auto;
+    text-align: center;
+}

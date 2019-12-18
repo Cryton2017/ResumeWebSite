@@ -1,0 +1,116 @@
+.component {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.component.second-component {
+    /* background-color: red; */
+}
+
+.contentAboutMe{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.leftContentAboutMe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 0.5%;
+}
+
+.rightContentAboutMe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 0.5%;
+}
+
+.introAboutMe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 2%;
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 30vh;
+}
+
+.ContactDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 96%;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 30vh;
+}
+
+.EducationDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 96%;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 30vh;
+}
+
+.bestSkills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 96%;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 2%;
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 95vh;
+}
+
+h1 {
+    margin: 3%;
+    text-align: center;
+}

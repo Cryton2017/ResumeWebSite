@@ -1,0 +1,14 @@
+.component {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.component.seventh-component {
+    /* background-color: red; */
+}
+
+h2 {
+    margin: auto;
+    text-align: center;
+}
