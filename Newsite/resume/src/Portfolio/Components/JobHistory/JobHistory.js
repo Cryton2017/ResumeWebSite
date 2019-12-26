@@ -16,6 +16,11 @@ export default () => {
               <td>From June 2019 to Present</td>
             </tr>
             <tr>
+              <th>Kashy Australia:</th>
+              <td>Co Founder and CTO</td>
+              <td>From February 2019 to Present</td>
+            </tr>
+            <tr>
               <th>Telstra:</th>
               <td>Automation Specialist Intern</td>
               <td>Winter Break in 2017 (Month of July).</td>

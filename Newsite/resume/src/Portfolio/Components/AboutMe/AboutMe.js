@@ -9,10 +9,10 @@ export default () => {
         <div className="leftContentAboutMe">
           <div className="introAboutMe">
             <p>
-              I am currently in my final year of university. I study at the Queensland University of Technology (QUT). I am studying a Bachelor of Information Technology majoring in Computer Science. I am also 
-              completing two minors. These are: Mobile Application Development and Networks and Security. Most of my study has been programming orientated but I have completed a number of units on design. I have 
-              also completed units in the area of data security. Most of my networking minor has been based around setting up functional networks with proper security in a lab environment however, I have had 
-              experience in configuring actual routers and creating functioning networks on campus. I have basic network penetration and web penetration experience.
+              I completed my degree in December 2018. I studied at the Queensland University of Technology (QUT). I studied a Bachelor of Information Technology majoring in Computer Science. I also 
+              completed two minors. These were: Mobile Application Development and Networks and Security. Most of my experience has focused on software development but I have completed a number of courses on design. I have 
+              also completed courses in the area of data security. Most of my networking minor has been based around setting up functional networks with proper security in a lab environment however, I have had 
+              experience in configuring actual CISCO routers and switches along with creating functioning networks on campus. I have basic network penetration and web penetration experience along with SQL Injection experience.
             </p>
           </div>
           <div className="ContactDetails">
@@ -59,7 +59,7 @@ export default () => {
         </div>
         <div className="rightContentAboutMe">
           <div className="bestSkills">
-            <h1>My Skills</h1>
+            <h1>My Top Skills</h1>
             <Table>
               <tbody>
                 <tr>
@@ -98,11 +98,6 @@ export default () => {
                   <th>Bash</th>
                   <td>Studied and practiced since 2019</td>
                 </tr>
-              </tbody>
-            </Table>
-            <p>I also have a wide range of experience in languages such as C, C# and Python.</p>
-            <Table>
-              <tbody>
                 <tr>
                   <th>Microsoft Office Suite</th>
                   <td>Used since I was young, age 10</td>
@@ -121,7 +116,6 @@ export default () => {
                 </tr>
               </tbody>
             </Table>
-            <p>I also have a wide range of experience in software such as Jetbrains RubyMine and Eclipse.</p>
           </div>
         </div>
       </div>

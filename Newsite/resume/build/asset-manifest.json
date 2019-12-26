@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.70acacc6.chunk.css",
+    "main.js": "/static/js/main.8ce91676.chunk.js",
+    "main.js.map": "/static/js/main.8ce91676.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b777d170.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b777d170.js.map",
+    "static/css/2.c47c0515.chunk.css": "/static/css/2.c47c0515.chunk.css",
+    "static/js/2.d0e7ebac.chunk.js": "/static/js/2.d0e7ebac.chunk.js",
+    "static/js/2.d0e7ebac.chunk.js.map": "/static/js/2.d0e7ebac.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a74041ef84056ab742d6c62dd0db2b0c.js": "/precache-manifest.a74041ef84056ab742d6c62dd0db2b0c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.c47c0515.chunk.css.map": "/static/css/2.c47c0515.chunk.css.map",
+    "static/css/main.70acacc6.chunk.css.map": "/static/css/main.70acacc6.chunk.css.map",
+    "static/js/2.d0e7ebac.chunk.js.LICENSE": "/static/js/2.d0e7ebac.chunk.js.LICENSE",
+    "static/media/Portfolio.css": "/static/media/background.6020e441.jpg",
+    "static/media/mibase-logo-web.png": "/static/media/mibase-logo-web.0a946f65.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b777d170.js",
+    "static/css/2.c47c0515.chunk.css",
+    "static/js/2.d0e7ebac.chunk.js",
+    "static/css/main.70acacc6.chunk.css",
+    "static/js/main.8ce91676.chunk.js"
+  ]
+}

@@ -36,3 +36,12 @@ html, body {
 .pagination-additional-class > li:not(:last-of-type) > a, .pagination-additional-class > li:not(:last-of-type) > span {
   margin-right: 50px;
 }
+
+.navItemDesign{
+  width: 10%;
+}
+
+.navLinkDesign{
+  background: transparent !important;
+  color: white !important;
+}

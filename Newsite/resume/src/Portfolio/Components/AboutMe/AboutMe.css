@@ -5,10 +5,12 @@
 }
 
 .component.second-component {
-    /* background-color: red; */
+    position: relative;
+    top: 5%;
 }
 
 .contentAboutMe{
+    font-size: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -22,6 +24,7 @@
     justify-content: center;
     align-items: center;
     width: 50%;
+    height: 50vh;
     margin-left: 1%;
     margin-top: 1%;
     margin-bottom: 1%;
@@ -90,7 +93,7 @@
     text-align: center;
     border: 1px black solid;
     border-radius: 5px;
-    height: 30vh;
+    height: 27vh;
 }
 
 .bestSkills{
@@ -100,14 +103,14 @@
     align-content: center;
     background-color: rgba(255, 255, 255, 0.9);
     width: 96%;
-    margin-top: 2%;
+    /*margin-top: 2%;
     margin-left: 2%;
     margin-right: 2%;
-    padding: 2%;
+    padding: 2%;*/
     text-align: center;
     border: 1px black solid;
     border-radius: 5px;
-    height: 95vh;
+    height: 87vh;
 }
 
 h1 {

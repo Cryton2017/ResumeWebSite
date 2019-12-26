@@ -6,10 +6,53 @@
 }
 
 .component.sixth-component {
-    /* background-color: gray; */
+    position: relative;
+    top: 5%;
 }
 
-h2 {
-    margin: auto;
+.contentCurrentProjectsLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%; 
+    max-height: 100vh;
+}
+
+.contentCurrentProjectsRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%; 
+    max-height: 100vh;
+}
+
+.currentProjectCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 96%;
+    height: 85vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 2%;
+}
+
+.MediaLayout{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.MediaLayout ol, ul{
+    text-align: left !important;
+}
+
+.MediaMiddleLayout{
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
