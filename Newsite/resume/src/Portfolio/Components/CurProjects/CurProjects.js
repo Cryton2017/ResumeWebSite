@@ -12,7 +12,7 @@ export default () => {
         <div className="contentCurrentProjectsLeft">
           <div className="currentProjectCard">
             <Media className="MediaLayout">
-              <Media left href="#">
+              <Media left href="#" className="ImgCont">
                 <img className="CurrLogo" src={kashyLogo} alt="Kashy Australia Logo" />
               </Media>
               <Media className="MediaMiddleLayout" body>
@@ -51,7 +51,7 @@ export default () => {
         <div className="contentCurrentProjectsRight">
           <div className="currentProjectCard">
             <Media className="MediaLayout">
-              <Media left href="#">
+              <Media left href="#" className="ImgCont">
                 <img className="CurrLogo" src={resumeFavicon} alt="Resume Website Favicon" />
               </Media>
               <Media className="MediaMiddleLayout" body>

@@ -25,7 +25,8 @@ h1 {
         font-size: auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start !important;
+        margin-top: 5% !important;
         align-items: center;
         width: 100%;
     }
@@ -36,11 +37,11 @@ h1 {
         justify-content: center;
         align-items: center;
         width: 90%;
-        height: 70vh;
-        margin-left: 1%;
-        margin-top: 1%;
-        margin-bottom: 1%;
-        margin-right: 0.5%;
+        height: auto !important;
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        margin-right: 0 !important;
     }
     
     .rightContentAboutMe{
@@ -49,11 +50,11 @@ h1 {
         justify-content: center;
         align-items: center;
         width: 90%;
-        height: 20vh;
-        margin-right: 1%;
-        margin-top: 1%;
-        margin-bottom: 1%;
-        margin-left: 0.5%;
+        height: auto !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
     }
     
     .introAboutMe{
@@ -62,11 +63,13 @@ h1 {
         background-color: rgba(255, 255, 255, 0.9);
         width: 96%;
         margin: auto;
+        margin-top: 0 !important;
+        margin-bottom: 2% !important;
         padding: 2%;
         text-align: center;
         border: 1px black solid;
         border-radius: 5px;
-        height: 30vh;
+        height: 15vh;
         overflow-y: scroll;
     }
     
@@ -76,13 +79,14 @@ h1 {
         background-color: rgba(255, 255, 255, 0.9);
         width: 96%;
         margin: auto;
-        margin-top: 2%;
+        margin-top: 0 !important;
+        margin-bottom: 2% !important;
         padding-left: 2%;
         padding-right: 2%;
         text-align: center;
         border: 1px black solid;
         border-radius: 5px;
-        height: 30vh;
+        height: 15vh;
         overflow: scroll;
     }
     
@@ -92,13 +96,14 @@ h1 {
         background-color: rgba(255, 255, 255, 0.9);
         width: 96%;
         margin: auto;
-        margin-top: 2%;
+        margin-top: 0 !important;
+        margin-bottom: 2% !important;
         padding-left: 2%;
         padding-right: 2%;
         text-align: center;
         border: 1px black solid;
         border-radius: 5px;
-        height: 30vh;
+        height: 15vh;
         overflow: scroll;
     }
     
@@ -108,12 +113,14 @@ h1 {
         background-color: rgba(255, 255, 255, 0.9);
         width: 96%;
         margin: auto;
-        margin-top: 2%;
-        padding: 2%;
+        margin-top: 0 !important;
+        margin-bottom: 2% !important;
+        padding-left: 2%;
+        padding-right: 2%;
         text-align: center;
         border: 1px black solid;
         border-radius: 5px;
-        height: 40vh;
+        height: 30vh;
         overflow: scroll;
     }
   }
