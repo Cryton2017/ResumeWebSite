@@ -4,29 +4,6 @@
     display: flex;
 }
 
-.component.fourth-component {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%; 
-    max-height: 100vh;
-}
-
-.contentMyReferences{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    width: 40%;
-    margin-left: 2%;
-    padding: 5%;
-    height: 80vh;
-    text-align: center;
-    border: 1px black solid;
-    border-radius: 5px;
-}
-
 .referenceInfo{
     display: flex;
     justify-content: center;
@@ -40,3 +17,81 @@ h1 {
     margin: auto;
     text-align: center;
 }
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .component.fourth-component {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; 
+        max-height: 100vh;
+    }
+    
+    .contentMyReferences{
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 90%;
+        margin: auto;
+        padding: 5%;
+        height: 80vh;
+        text-align: center;
+        border: 1px black solid;
+        border-radius: 5px;
+        overflow: scroll;
+    }
+  }
+  
+  /* Tablet Styles */
+  @media (min-width: 768px) and (max-width: 992px) {
+    .component.fourth-component {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; 
+        max-height: 100vh;
+    }
+    
+    .contentMyReferences{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 60%;
+        margin: auto;
+        padding: 5%;
+        height: 80vh;
+        text-align: center;
+        border: 1px black solid;
+        border-radius: 5px;
+        overflow: scroll;
+    }
+  }
+  
+  /* Desktop Styles */
+  @media (min-width: 993px) {
+    .component.fourth-component {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%; 
+        max-height: 100vh;
+    }
+    
+    .contentMyReferences{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 40%;
+        margin-left: 2%;
+        padding: 5%;
+        height: 80vh;
+        text-align: center;
+        border: 1px black solid;
+        border-radius: 5px;
+    }
+  }

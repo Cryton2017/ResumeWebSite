@@ -11,7 +11,7 @@ export default () => {
         <div className="pastProjectCard">
           <Media className="pastMediaLayout">
             <Media left href="#">
-              <img src={MiBase} alt="MiBase Australia Logo" />
+              <img className="PastLogo" src={MiBase} alt="MiBase Australia Logo" />
             </Media>
             <Media className="pastMediaLayout" body>
               <Media heading>

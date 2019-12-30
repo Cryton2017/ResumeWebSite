@@ -24,7 +24,7 @@ html, body {
   margin-top: 20px;
 }
 
-.pagination-additional-class {
+.nav-section{
   margin: 0;
   position: fixed;
   top: 20px;
@@ -33,15 +33,58 @@ html, body {
   width: 100%;
 }
 
-.pagination-additional-class > li:not(:last-of-type) > a, .pagination-additional-class > li:not(:last-of-type) > span {
+.nav-section > li:not(:last-of-type) > a, .pagination-additional-class > li:not(:last-of-type) > span {
   margin-right: 50px;
 }
 
-.navItemDesign{
-  width: 10%;
+.navContainer{
+  width: 100%;
 }
 
-.navLinkDesign{
-  background: transparent !important;
-  color: white !important;
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .btnCont{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+
+  .navItemDesign{
+    margin: auto;
+    padding: 0 !important;
+    text-align: center;
+    width: 50%;
+  }
+  
+  .navLinkDesign{
+    background: transparent !important;
+    color: white !important;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 992px) {
+  .navItemDesign{
+    margin: auto;
+    padding: 0 !important;
+    text-align: center;
+    width: 16%;
+  }
+  
+  .navLinkDesign{
+    background: transparent !important;
+    color: white !important;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 993px) {
+  .navItemDesign{
+    width: 10%;
+  }
+  
+  .navLinkDesign{
+    background: transparent !important;
+    color: white !important;
+  }
 }

@@ -1,10 +1,10 @@
 import React from "react";
-import './AboutMe.css';
 import { Table } from 'reactstrap';
+import './AboutMe.css';
 
 export default () => {
   return (
-    <div className="component second-component">
+    <div className="componentAboutMe aboutMe-component">
       <div className="contentAboutMe">
         <div className="leftContentAboutMe">
           <div className="introAboutMe">

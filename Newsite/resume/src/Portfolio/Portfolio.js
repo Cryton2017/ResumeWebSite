@@ -2,12 +2,7 @@ import React, { Component } from 'react';
 import ReactPageScroller from "react-page-scroller";
 import { Nav, 
         NavItem, 
-        Dropdown, 
-        DropdownItem, 
-        DropdownToggle, 
-        DropdownMenu, 
         NavLink } from 'reactstrap';
-import { Pager } from "react-bootstrap";
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './Portfolio.css';
@@ -22,13 +17,64 @@ class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: null
+      currentPage: 0,
+      pageCont: []
     };
 
   }
 
-  handlePageChange = number => {
+  buildPage(){
+    const match = window.matchMedia(`(max-width: 767px)`);
+    if( match.matches){
+      const pageCont = this.MobileNavigation();
+      return [...pageCont];
+    }else{
+      const pageCont = this.DesktopNavigation();
+      return [...pageCont];
+    }
+  }
 
+  DesktopNavigation(){
+    const navSection = [];
+    const pageNumbers = this.getPagesNumbers();
+
+    navSection.push(
+      <React.Fragment>
+        <ReactPageScroller
+        pageOnChange={this.handlePageChange}
+        customPageNumber={this.state.currentPage}>
+          <Intro />
+          <AboutMe />
+          <JobHistory />
+          <References />
+          <PastProjects />
+          <CurrProjects />
+        </ReactPageScroller>
+        <Nav pills className="nav-section" bsSize="large">
+          {pageNumbers}
+        </Nav>
+      </React.Fragment>
+    );
+
+    return [...navSection];
+  }
+
+  getPagesNumbers = () => {
+    const pageNumbers = [];
+    var pageTitles = ["Intro", "About Me", "Job History", "References", "Past Projects", "Current Projects", "Further Details"];
+
+    for (let i = 0; i <= 5; i++) {
+      pageNumbers.push(
+        <NavItem className="navItemDesign">
+          <strong><NavLink className="navLinkDesign" href="#" onClick={() => this.handlePageChange(i)}><p id={i}>{pageTitles[i]}</p></NavLink></strong>
+        </NavItem>
+      );
+    }
+
+    return [...pageNumbers];
+  };
+
+  handlePageChange = number => {
     if(number === 0){
       document.getElementById("0").style.borderBottom = '2px solid white';
       document.getElementById("1").style.borderBottom = '0px';
@@ -76,38 +122,15 @@ class Portfolio extends Component {
     this.setState({ currentPage: number }); // set currentPage number, to reset it from the previous selected.
   };
 
-  getPagesNumbers = () => {
-    const pageNumbers = [];
-    var pageTitles = ["Intro", "About Me", "Job History", "References", "Past Projects", "Current Projects", "Further Details"];
-    var pageNames = ["Intro", "AboutMe", "JobHistory", "References", "PastProjects", "CurProjects", "FurtherDetails"];
+  MobileNavigation(){
+    const navSection = [];
+    const pageNumbers = this.getPageButtons();
 
-    for (let i = 0; i <= 5; i++) {
-      pageNumbers.push(
-        <NavItem className="navItemDesign">
-          <strong><NavLink className="navLinkDesign" href="#" onClick={() => this.handlePageChange(i)}><p  id={i}>{pageTitles[i]}</p></NavLink></strong>
-        </NavItem>
-      );
-    }
-
-    return [...pageNumbers];
-  };
-
-  componentDidMount(){
-    document.title = "Christopher Littlewood - Portfolio"
-  }
-
-  goToPage = (pageNumber) => {
-    this.reactPageScroller.goToPage(pageNumber);
-  }
-  
-  render() {
-    const pagesNumbers = this.getPagesNumbers();
-
-    return (
-      // <div>
+    navSection.push(
       <React.Fragment>
         <ReactPageScroller
-          pageOnChange={this.handlePageChange}
+          blockScrollUp={true}
+          blockScrollDown={true}
           customPageNumber={this.state.currentPage}>
           <Intro />
           <AboutMe />
@@ -116,12 +139,72 @@ class Portfolio extends Component {
           <PastProjects />
           <CurrProjects />
         </ReactPageScroller>
-        <Nav pills className="pagination-additional-class" bsSize="large"n>
-          {pagesNumbers}
+        <Nav pills className="nav-section" bsSize="large">
+          {pageNumbers}
         </Nav>
       </React.Fragment>
+    );
+
+    return [...navSection];
+  }
+
+  getPageButtons = () => {
+    const pageNumbers = [];
+
+    pageNumbers.push(
+      <div className="btnCont">
+        <NavItem className="navItemDesign">
+          <strong><NavLink className="navLinkDesign" href="#" onClick={() => this.changePage("Prev")}><p>Previous</p></NavLink></strong>
+        </NavItem>
+        <NavItem className="navItemDesign">
+          <strong><NavLink className="navLinkDesign" href="#" onClick={() => this.changePage("Next")}><p>Next</p></NavLink></strong>
+        </NavItem>
+      </div>
+    );
+
+    return [...pageNumbers];
+  };
+
+  changePage = direction => {
+    var pageNum = this.state.currentPage;
+
+    if(direction === "Prev"){
+      if(pageNum === null || pageNum === 0){
+        alert("On First Page!");
+      }else{
+        pageNum = pageNum - 1;
+        this.handlePageChangeMobile(pageNum)
+      }
+    }else if(direction === "Next"){
+      if(pageNum === 5){
+        alert("On Last Page!");
+      }else{
+        pageNum = pageNum + 1;
+        this.handlePageChangeMobile(pageNum)
+      }
+    }
+  }
+
+  handlePageChangeMobile = number => {
+    this.setState({ currentPage: number }); // set currentPage number, to reset it from the previous selected.
+  };
+
+  componentDidMount(){
+    document.title = "Christopher Littlewood - Portfolio";
+  }
+
+  goToPage = (pageNumber) => {
+    this.reactPageScroller.goToPage(pageNumber);
+  }
+  
+  render() {
+    const navigationSection = this.buildPage();
+
+    return (
+      <div>
+        {navigationSection}
+      </div>
         
-      // </div>
     );
   }
 }
