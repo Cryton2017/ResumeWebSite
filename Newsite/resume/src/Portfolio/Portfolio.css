@@ -64,6 +64,11 @@ html, body {
 
 /* Tablet Styles */
 @media (min-width: 768px) and (max-width: 992px) {
+  body{
+    font-size: calc(3px + (15 - 3) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+  }
+
   .navItemDesign{
     margin: auto;
     padding: 0 !important;
@@ -78,7 +83,12 @@ html, body {
 }
 
 /* Desktop Styles */
-@media (min-width: 993px) {
+@media (min-width: 993px){
+  body{
+    font-size: calc(1px + (10 - 1) * ((100vw - 200px) / (1200 - 200)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+  }
+
   .navItemDesign{
     width: 10%;
   }

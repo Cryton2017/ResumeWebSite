@@ -6,19 +6,33 @@ import { Nav,
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './Portfolio.css';
-import Intro from './Components/Intro/Intro';
-import AboutMe from './Components/AboutMe/AboutMe';
-import JobHistory from './Components/JobHistory/JobHistory';
-import References from './Components/References/References';
-import PastProjects from './Components/PastProjects/PastProjects';
-import CurrProjects from './Components/CurProjects/CurProjects';
+
+//Get the desktop components:
+import Intro from './Components/Desktop/Intro/Intro';
+import AboutMe from './Components/Desktop/AboutMe/AboutMe';
+import JobHistory from './Components/Desktop/JobHistory/JobHistory';
+import References from './Components/Desktop/References/References';
+import PastProjects from './Components/Desktop/PastProjects/PastProjects';
+import CurrProjects from './Components/Desktop/CurProjects/CurProjects';
+
+//Get the mobile components:
+import IntroMobile from './Components/Mobile/IntroMobile/IntroMobile';
+import AboutMeIntroMobile from './Components/Mobile/AboutMeIntro/AboutMeIntro';
+import AboutMeContactMobile from './Components/Mobile/AboutMeContact/AboutMeContact';
+import AboutMeEducationMobile from './Components/Mobile/AboutMeEducation/AboutMeEducation';
+import AboutMeSkillsMobile from './Components/Mobile/AboutMeSkills/AboutMeSkills';
+import JobHistoryJobsMobile from './Components/Mobile/JobHistoryJobs/JobHistoryJobs';
+import JobHistoryVolunteerMobile from './Components/Mobile/JobHistoryVolunteer/JobHistoryVolunteer';
+import ReferencesMobile from './Components/Mobile/ReferencesMobile/ReferencesMobile';
+import PastProjectsMobile1 from './Components/Mobile/PastProjects1/PastProjects1';
+import CurrProjectsMobile1 from './Components/Mobile/CurrProjectsMobile1/CurrProjectsMobile1';
+import CurrProjectsMobile2 from './Components/Mobile/CurrProjectsMobile2/CurrProjectsMobile2';
 
 class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: 0,
-      pageCont: []
+      currentPage: 0
     };
 
   }
@@ -132,12 +146,17 @@ class Portfolio extends Component {
           blockScrollUp={true}
           blockScrollDown={true}
           customPageNumber={this.state.currentPage}>
-          <Intro />
-          <AboutMe />
-          <JobHistory />
-          <References />
-          <PastProjects />
-          <CurrProjects />
+          <IntroMobile />
+          <AboutMeIntroMobile />
+          <AboutMeContactMobile />
+          <AboutMeEducationMobile />
+          <AboutMeSkillsMobile />
+          <JobHistoryJobsMobile />
+          <JobHistoryVolunteerMobile />
+          <ReferencesMobile />
+          <PastProjectsMobile1 />
+          <CurrProjectsMobile1 />
+          <CurrProjectsMobile2 />
         </ReactPageScroller>
         <Nav pills className="nav-section" bsSize="large">
           {pageNumbers}
@@ -176,7 +195,7 @@ class Portfolio extends Component {
         this.handlePageChangeMobile(pageNum)
       }
     }else if(direction === "Next"){
-      if(pageNum === 5){
+      if(pageNum === 10){
         alert("On Last Page!");
       }else{
         pageNum = pageNum + 1;

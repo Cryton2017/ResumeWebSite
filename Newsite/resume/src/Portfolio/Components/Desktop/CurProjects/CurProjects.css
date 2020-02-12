@@ -1,0 +1,197 @@
+.componentCurrProj {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start !important;
+}
+
+.componentCurrProj.currProj-component {
+    position: relative;
+    top: 5%;
+}
+
+.CurrLogo{
+    width: 100%;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .ImgCont{
+        position: relative;
+        left: 25%;
+        width: 50%;
+    }
+
+    .contentCurrentProjects{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 100%; 
+        height: auto;
+        margin-top: 5% !important;
+    }
+
+    .contentCurrentProjectsLeft{
+        margin-top: 0 !important;
+        display: flex;
+        margin: auto;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .contentCurrentProjectsRight{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 100%;
+    }
+    
+    .currentProjectCard{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2% !important;
+        margin: auto;
+        width: 90%;
+        height: 37vh;
+        background-color: rgba(255, 255, 255, 0.9);
+        overflow: scroll;
+    }
+    
+    .MediaLayout{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 5%;
+    }
+    
+    .MediaLayout ol, ul{
+        text-align: left !important;
+    }
+    
+    .MediaMiddleLayout{
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+  }
+  
+  /* Tablet Styles */
+  @media (min-width: 768px) and (max-width: 992px) {
+    .CurrLogo{
+        position: relative;
+        left: 50%;
+        width: 100%;
+    }
+
+    .contentCurrentProjects{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 100%; 
+        max-height: 100vh;
+    }
+
+    .contentCurrentProjectsLeft{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 100%; 
+        max-height: 100vh;
+    }
+    
+    .contentCurrentProjectsRight{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 100%; 
+        max-height: 100vh;
+    }
+    
+    .currentProjectCard{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2% !important;
+        margin: auto;
+        width: 90%;
+        height: 40vh;
+        background-color: rgba(255, 255, 255, 0.9);
+        overflow: scroll;
+    }
+    
+    .MediaLayout{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 5%;
+    }
+    
+    .MediaLayout ol, ul{
+        text-align: left !important;
+    }
+    
+    .MediaMiddleLayout{
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+  }
+  
+  /* Desktop Styles */
+  @media (min-width: 993px) {
+    .contentCurrentProjects{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%; 
+        max-height: 100vh;
+    }
+
+    .contentCurrentProjectsLeft{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%; 
+        max-height: 100vh;
+    }
+    
+    .contentCurrentProjectsRight{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%; 
+        max-height: 100vh;
+    }
+    
+    .currentProjectCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 96%;
+        height: 85vh;
+        background-color: rgba(255, 255, 255, 0.9);
+        margin: 2%;
+    }
+    
+    .MediaLayout{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+    }
+    
+    .MediaLayout ol, ul{
+        text-align: left !important;
+    }
+    
+    .MediaMiddleLayout{
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+  }
