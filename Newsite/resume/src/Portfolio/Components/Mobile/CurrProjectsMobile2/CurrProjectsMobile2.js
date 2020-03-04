@@ -30,7 +30,7 @@ export default () => {
                   </ol>
                 </Media>
                 You can reach me at clittlewood50@gmail.com.au. The repository can be viewed on GitHub via the 
-                link: https://github.com/Cryton2017/ResumeWebSite This website is under constant development and 
+                <a href="https://github.com/Cryton2017/ResumeWebSite"> this</a> link. This website is under constant development and 
                 I plan to create different version of the same website using different frameworks such as Angular. 
                 I also plan to implement a vanilla JavaScript version in the near future.
               </Media>

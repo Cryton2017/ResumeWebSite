@@ -4,8 +4,18 @@
     display: flex;
 }
 
+.componentPastProjectOneMobile.PastProjectOneMobile-component {
+    position: relative;
+    top: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%; 
+    max-height: 100vh;
+}
+
 h2 {
-    margin: auto;
+    padding: 5% !important;
     text-align: center;
 }
 
@@ -16,24 +26,21 @@ h2 {
 /* Mobile Styles */
 @media only screen and (max-width: 767px) {
     .componentPastProjectOneMobile.PastProjectOneMobile-component {
-        position: relative;
-        top: 5%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        justify-content: center !important;
+        align-items: flex-start !important;
         width: 100%; 
-        height: auto;
+        max-height: 100vh;
     }
 
     .contentPastProjectsOneLeftMobile{
+        font-size: auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start !important;
+        margin-top: 5% !important;
         align-items: center;
-        width: 100%; 
-        height: 75vh;
-        margin-top: 0% !important;
+        width: 100%;
     }
     
     .pastProjectCardOneMobile{
@@ -41,7 +48,7 @@ h2 {
         flex-direction: column;
         margin: auto;
         width: 90%;
-        height: 85vh;
+        height: 70vh;
         background-color: rgba(255, 255, 255, 0.9);
         overflow: scroll;
     }

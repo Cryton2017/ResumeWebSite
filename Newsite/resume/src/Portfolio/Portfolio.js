@@ -141,27 +141,30 @@ class Portfolio extends Component {
     const pageNumbers = this.getPageButtons();
 
     navSection.push(
-      <React.Fragment>
-        <ReactPageScroller
-          blockScrollUp={true}
-          blockScrollDown={true}
-          customPageNumber={this.state.currentPage}>
-          <IntroMobile />
-          <AboutMeIntroMobile />
-          <AboutMeContactMobile />
-          <AboutMeEducationMobile />
-          <AboutMeSkillsMobile />
-          <JobHistoryJobsMobile />
-          <JobHistoryVolunteerMobile />
-          <ReferencesMobile />
-          <PastProjectsMobile1 />
-          <CurrProjectsMobile1 />
-          <CurrProjectsMobile2 />
-        </ReactPageScroller>
+      <div>
+        <React.Fragment>
+          <ReactPageScroller
+            blockScrollUp={true}
+            blockScrollDown={true}
+            customPageNumber={this.state.currentPage}>
+            <IntroMobile />
+            <AboutMeIntroMobile />
+            <AboutMeContactMobile />
+            <AboutMeEducationMobile />
+            <AboutMeSkillsMobile />
+            <JobHistoryJobsMobile />
+            <JobHistoryVolunteerMobile />
+            <ReferencesMobile />
+            <PastProjectsMobile1 />
+            <CurrProjectsMobile1 />
+            <CurrProjectsMobile2 />
+          </ReactPageScroller>
+          
+        </React.Fragment>
         <Nav pills className="nav-section" bsSize="large">
           {pageNumbers}
         </Nav>
-      </React.Fragment>
+      </div>
     );
 
     return [...navSection];

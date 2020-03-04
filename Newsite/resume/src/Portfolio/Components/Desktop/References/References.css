@@ -91,10 +91,21 @@ h1 {
         background-color: rgba(255, 255, 255, 0.9);
         width: 40%;
         margin-left: 2%;
-        padding: 5%;
+        padding: 1%;
         height: 80vh;
         text-align: center;
         border: 1px black solid;
         border-radius: 5px;
     }
+
+    .contentMyReferences h1{
+        margin-top: 0 !important;
+        padding: 0 !important;
+    }
+
+    .referenceInfo h2{
+        padding: 1% !important;
+        /* margin: 0!important; */
+    }
+
   }

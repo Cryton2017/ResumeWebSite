@@ -6,19 +6,27 @@
 
 .componentAboutMeEducationMobile.aboutMeEducationMobile-component {
     position: relative;
-    top: 5%;
+    top: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%; 
+    max-height: 100vh;
 }
 
 h1 {
-    margin: 3%;
+    padding: 5% !important;
     text-align: center;
 }
 
 /* Mobile Styles */
 @media(max-width: 767px) {
     .componentAboutMeEducationMobile.aboutMeEducationMobile-component {
-        position: relative;
-        top: 2% !important;
+        display: flex;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        width: 100%; 
+        max-height: 100vh;
     }
 
     .contentAboutMeEducationMobile{
@@ -57,7 +65,7 @@ h1 {
         text-align: center;
         border: 1px black solid;
         border-radius: 5px;
-        height: 50vh;
+        height: 70vh;
         overflow: scroll;
     }
   }

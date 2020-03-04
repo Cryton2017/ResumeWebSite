@@ -6,7 +6,12 @@
 
 .componentAboutMeContactMobile.aboutMeContactMobile-component {
     position: relative;
-    top: 5%;
+    top: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%; 
+    max-height: 100vh;
 }
 
 h1 {
@@ -17,8 +22,11 @@ h1 {
 /* Mobile Styles */
 @media(max-width: 767px) {
     .componentAboutMeContactMobile.aboutMeContactMobile-component {
-        position: relative;
-        top: 2% !important;
+        display: flex;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        width: 100%; 
+        max-height: 100vh;
     }
 
     .contentAboutMeContactMobile{
@@ -27,7 +35,7 @@ h1 {
         flex-direction: column;
         justify-content: flex-start !important;
         margin-top: 5% !important;
-        align-items: center;
+        align-items: center !important;
         width: 100%;
     }
     
@@ -36,8 +44,7 @@ h1 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 90%;
-        height: auto !important;
+        width: 100%;
         margin-left: 0 !important;
         margin-top: 0 !important;
         margin-bottom: 0 !important;
@@ -52,13 +59,13 @@ h1 {
         margin: auto;
         margin-top: 0 !important;
         margin-bottom: 2% !important;
-        padding-left: 2%;
-        padding-right: 2%;
+        padding: 2%;
         text-align: center;
         border: 1px black solid;
         border-radius: 5px;
-        height: 40vh;
-        overflow: scroll;
+        height: 70vh;
+        overflow-y: scroll;
+        padding: 5%;
     }
   }
   
@@ -92,9 +99,7 @@ h1 {
         background-color: rgba(255, 255, 255, 0.9);
         width: 96%;
         margin: auto;
-        margin-top: 0% !important;
-        padding-left: 2%;
-        padding-right: 2%;
+        padding: 2%;
         text-align: center;
         border: 1px black solid;
         border-radius: 5px;
@@ -113,7 +118,7 @@ h1 {
         align-items: center;
         width: 100%;
     }
-    
+
     .leftContentAboutMeContactMobile{
         display: flex;
         flex-direction: column;
@@ -127,19 +132,6 @@ h1 {
         margin-right: 0.5%;
     }
     
-    .rightContentAboutMe{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        height: 100vh;
-        margin-right: 1%;
-        margin-top: 1%;
-        margin-bottom: 1%;
-        margin-left: 0.5%;
-    }
-
     .ContactDetailsMobile{
         display: flex;
         flex-direction: column;
@@ -147,11 +139,9 @@ h1 {
         align-content: center;
         background-color: rgba(255, 255, 255, 0.9);
         width: 96%;
-        margin-top: 2%;
         margin-left: 2%;
         margin-right: 2%;
-        padding-left: 2%;
-        padding-right: 2%;
+        padding: 2%;
         text-align: center;
         border: 1px black solid;
         border-radius: 5px;

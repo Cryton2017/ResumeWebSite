@@ -293,6 +293,10 @@ h1 {
         border-radius: 5px;
         height: 30vh;
     }
+
+    .ContactDetails h1{
+        padding: 0 !important;
+    }
     
     .EducationDetails{
         display: flex;
@@ -311,6 +315,10 @@ h1 {
         border-radius: 5px;
         height: 27vh;
     }
+
+    .EducationDetails h1{
+        padding: 0 !important;
+    }
     
     .bestSkills{
         display: flex;
@@ -324,5 +332,9 @@ h1 {
         border: 1px black solid;
         border-radius: 5px;
         height: 87vh;
+    }
+
+    .bestSkills h1{
+        padding: 0 !important;
     }
   }

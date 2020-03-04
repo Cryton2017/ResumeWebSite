@@ -4,9 +4,9 @@
     display: flex;
 }
 
-.component.first-component {
+.component.intro-component {
     position: relative;
-    top: 5%;
+    top: 10%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -14,7 +14,7 @@
     max-height: 100vh;
 }
 
-.first-component--inside-scroller {
+.intro-component--inside-scroller {
     position: absolute;
     right: 20px;
     top: 100px;
@@ -27,7 +27,7 @@ h2 {
 
 /* Mobile Styles */
 @media (max-width: 767px) {
-    .component.first-component {
+    .component.intro-component {
         display: flex;
         justify-content: center !important;
         align-items: flex-start !important;
@@ -45,7 +45,7 @@ h2 {
         margin-left: 0 !important;
         margin-top: 5% !important;
         padding: 5%;
-        height: 50vh;
+        height: 70vh;
         text-align: center;
         border: 1px black solid;
         border-radius: 5px;

@@ -2,13 +2,16 @@
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: flex-start !important;
 }
 
 .componentCurrProjTwoMobile.currProjTwoMobile-component {
     position: relative;
-    top: 5%;
+    top: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%; 
+    max-height: 100vh;
 }
 
 .CurrLogoTwoMobile{
@@ -23,6 +26,16 @@
         width: 50%;
     }
 
+    .componentCurrProjTwoMobile.currProjTwoMobile-component {
+        font-size: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start !important;
+        margin-top: 5% !important;
+        align-items: center;
+        width: 100%;
+    }
+
     .contentCurrentProjectTwoMobile{
         display: flex;
         flex-direction: column;
@@ -33,18 +46,19 @@
     }
     
     .contentCurrentProjectsRightMobile{
+        margin-top: 0 !important;
         display: flex;
-        flex-direction: column;
         margin: auto;
+        align-items: center;
         width: 100%;
     }
     
     .currentProjectCardTwoMobile{
         display: flex;
         flex-direction: column;
-        margin-top: 2% !important;
+        margin-top: 0% !important;
         margin: auto;
-        width: 90%;
+        width: 96%;
         height: 70vh;
         background-color: rgba(255, 255, 255, 0.9);
         overflow: scroll;

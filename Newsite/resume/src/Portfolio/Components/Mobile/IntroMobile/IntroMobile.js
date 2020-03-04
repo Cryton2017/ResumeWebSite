@@ -3,7 +3,7 @@ import './Intro.css';
 
 export default () => {
   return (
-    <div className="component first-component">
+    <div className="component intro-component">
       <div className="contentIntro">
         <h1>Welcome</h1>
         <p>
